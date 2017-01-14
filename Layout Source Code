@@ -1,0 +1,222 @@
+主菜单布局：
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+<ImageView
+    android:id="@+id/biaoti"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:src="@drawable/biaoti" 
+    android:scaleType="fitStart"
+    android:background="#00000000"/>
+
+    <ImageButton
+        android:id="@+id/ezmode"
+        android:layout_width="240dp"
+        android:layout_height="64dp"
+        android:layout_below="@+id/biaoti"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/ezmode" 
+            android:scaleType="fitStart"
+            />
+    <ImageButton
+        android:id="@+id/exmode"
+        android:layout_width="240dp"
+        android:layout_height="64dp"
+        android:layout_alignLeft="@+id/ezmode"
+        android:layout_below="@+id/ezmode"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/exmod"
+            android:scaleType="fitStart"
+            android:background="#00000000" />
+
+    <ImageButton
+        android:id="@+id/instruction"
+        android:layout_width="240dp"
+        android:layout_height="64dp"
+        android:layout_alignLeft="@+id/exmode"
+        android:layout_below="@+id/exmode"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/instruction" 
+            android:scaleType="fitStart"
+            android:background="#00000000"/>
+
+    <ImageButton
+        android:id="@+id/exit"
+        android:layout_width="240dp"
+        android:layout_height="64dp"
+        android:layout_alignLeft="@+id/instruction"
+        android:layout_below="@+id/instruction"
+                android:layout_marginTop="25dp"
+        android:src="@drawable/exit" 
+            android:scaleType="fitStart"
+            android:background="#00000000"/>
+
+</RelativeLayout>
+ 
+EX MODE菜单布局：
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+	<ImageButton
+	    android:id="@+id/backtoez"
+	    android:layout_width="200dp"
+	    android:layout_height="45dp"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginBottom="110dp"
+	    android:background="#00000000"
+	    android:scaleType="fitStart"
+	    android:src="@drawable/backtoezmod" />
+
+	<ImageButton
+	    android:id="@+id/opengps"
+	    android:layout_width="200dp"
+	    android:layout_height="45dp"
+	    android:layout_alignLeft="@+id/backtoez"
+	    android:layout_centerVertical="true"
+	    android:background="#00000000"
+	    android:scaleType="fitStart"
+	    android:src="@drawable/opengps" />
+
+	<TextView
+	    android:id="@+id/refresh"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="68dp"
+	    android:text="当前无车载GPS的信息！"
+	    android:textSize="24sp" />
+
+</RelativeLayout>
+
+ 
+EZ MODE菜单布局：
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/mybike"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/mylocation"
+        android:layout_marginRight="23dp"
+        android:src="@drawable/mybike" 
+            android:scaleType="fitStart"
+            android:background="#00000000"/>
+
+    <ImageView
+        android:id="@+id/mylocation"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/mylocation"
+            android:scaleType="fitStart" 
+            android:background="#00000000"/>
+
+	<TextView
+	    android:id="@+id/mylocationtext"
+	    android:layout_width="130dp"
+	    android:layout_height="150dp"
+	    android:layout_alignLeft="@+id/mylocation"
+	    android:layout_below="@+id/mylocation"
+	    android:text="Latitude :\nunknown\nLontitude :\nunknown\nAddress :\nunknown" />
+	<TextView
+	    android:id="@+id/mybiketext"
+	    android:layout_width="130dp"
+	    android:layout_height="150dp"
+	    android:layout_alignLeft="@+id/mybike"
+	    android:layout_below="@+id/mybike"
+	    android:text="Latitude :\nunknown\nLontitude :\nunknown\nAddress :\nunknown" />
+
+	    <ImageView
+	        android:id="@+id/distance"
+	        android:layout_width="110dp"
+	        android:layout_height="50dp"
+	        android:layout_alignLeft="@+id/mylocationtext"
+	        android:layout_below="@+id/mylocationtext"
+	        android:src="@drawable/distance" 
+	            android:scaleType="fitStart"
+	            android:background="#00000000"/>
+
+	<TextView
+	    android:id="@+id/distancetext"
+	    android:layout_width="200dp"
+	    android:layout_height="80dp"
+	    android:layout_alignTop="@+id/distance"
+	    android:layout_toRightOf="@+id/mylocationtext"
+	    android:text="100.00m"
+	    android:textSize="20sp" />
+
+	<ImageButton
+	    android:id="@+id/storemybike"
+	    android:layout_width="200dp"
+	    android:layout_height="45dp"
+	    android:layout_below="@+id/distancetext"
+	    android:layout_centerHorizontal="true"
+	    android:scaleType="fitStart"
+	    android:src="@drawable/storemybike" 
+	    android:background="#00000000"/>
+
+	<ImageButton
+	    android:id="@+id/surroundingview"
+	    android:layout_width="200dp"
+	    android:layout_height="45dp"
+	    android:layout_alignLeft="@+id/openthemap"
+	    android:layout_below="@+id/openthemap"
+	    android:layout_marginTop="15dp"
+	    android:scaleType="fitStart"
+	    android:src="@drawable/surroundingview" 
+	    android:background="#00000000"/>
+
+	<ImageButton
+	    android:id="@+id/openthemap"
+	    android:layout_width="200dp"
+	    android:layout_height="45dp"
+	    android:layout_alignLeft="@+id/storemybike"
+	    android:layout_below="@+id/storemybike"
+	    android:layout_marginTop="15dp"
+	    android:scaleType="fitStart"
+	    android:src="@drawable/openthemap" 
+	    android:background="#00000000"/>
+
+</RelativeLayout>
+
+
+
+ 
+
+Instruction界面布局：
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/shuoming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:textSize="24sp"
+        android:text="app名称：This is my bike （这是我的单车）\n作者：林霖   马廷俊  徐松斌  黄培裕\nDemoApplication.java\nOpenmap.java\nSurroundingview,java\n参考了百度地图SDK的部分代码\n\nSMSBroadcastReceiver.java\n参考了一片关于读取实时短信的博客" />
+        
+</RelativeLayout>
+
+ 
+
